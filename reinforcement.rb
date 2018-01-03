@@ -1,4 +1,4 @@
-{ data: { rooms:
+data = { data: { rooms:
     [ { id: 1, room_number: "201", capacity: 50}, { id: 2, room_number: "301", capacity: 200 }, { id: 3, room_number: "1B", capacity: 100}
     ],
     events: [
@@ -9,3 +9,12 @@
     ]
   }
 }
+
+  cap = data[:data][:rooms][0][:capacity]
+
+
+  data[:data][:events].each do |event|
+    if event[:attendees] >= 50
+      puts " Room ID #{event[:id]} is good for the event"
+    end
+  end
