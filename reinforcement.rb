@@ -15,6 +15,8 @@ data = { data: { rooms:
 
   data[:data][:events].each do |event|
     if event[:attendees] >= 50
-      puts " Room ID #{event[:id]} is good for the event"
+      puts " Room ID #{event[:room_id]} is good for the event"
+    else
+      puts " Room ID #{event[:room_id]} is not good for this event"
     end
   end
